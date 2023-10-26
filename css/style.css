@@ -1,0 +1,286 @@
+/* Aquí debes escribir todo el código CSS */
+@font-face {
+    font-family: Montserrat;
+    src: url("../font/Montserrat-Regular.ttf");
+}
+
+@keyframes mostrar{
+    from{right: -200px;}
+    to{right: 0;}
+}
+
+@keyframes ocultar{
+    from{right: 0px;}
+    to{right: -200px;}
+}
+
+.aparecer {
+
+    animation-name: mostrar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+.desaparecer {
+
+    animation-name: ocultar;
+    animation-duration: 1s;
+    animation-fill-mode:forwards ;
+}
+
+
+body{
+    margin: 0;
+}
+main {
+    font-family: Montserrat;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: gray;
+    margin-right: 30px;
+
+}
+
+.link {
+    margin-right: 10px;
+    
+}
+
+.links {
+
+    display: none;
+    
+
+}
+
+.linksmq {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1  ;
+    background-color: gray;
+    top: 40px;
+    border-radius: 15px;
+
+}
+
+.navmq {
+   
+     color: white;
+     font-size: 1.4em;
+     padding: 8px 20px;
+ }
+
+
+
+.scnPresent {
+   background-image: url("../img/felicitacion_reyes_godos.png");
+   background-size: cover;
+   background-position: 100% 0;
+   height: 600px;
+   padding: 15px;
+   overflow: scroll;
+   position: relative;
+
+}
+
+
+.azul {
+    width: 90%;
+    margin: auto;
+    background-color: royalblue;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px 10px;
+    
+}
+
+.texto {
+    padding: 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    color: white;
+}
+
+.scnContent {
+
+    --red: #e52d27;
+    --gray: #212121;
+    
+}
+
+.texto1 {
+    background-color:var(--red);
+}
+
+.texto2 {
+    background-color: var(--gray);
+}
+
+
+/* Screen 320px */
+
+
+@media only screen and (min-width:320px) {
+
+        article {   
+
+            display: flex;
+
+        }
+        .imagen {
+            width: 50%;
+        }
+
+        .texto {
+            flex: 1;
+        }
+
+        .texto2 {
+
+            order: 1;
+
+        }
+        
+        .imagen1 {
+
+            background-color: var(--gray);
+        }
+
+        .imagen2 {
+
+            order: 2;
+            background-color: var(--red);
+        }
+
+}
+
+/* Screen 500px */
+
+
+@media only screen and (min-width:500px) {
+
+        .imagen1 {
+
+            background-image: url("../img/mini1.png");
+        }
+        .imagen2 {
+
+            background-image: url("../img/mini2.png");
+            order: 1;
+        }
+
+        .texto2 {
+            order: 2;
+        }
+
+        .imagen {
+            background-size: cover;
+            width: 30%;
+        }
+
+        .texto {
+            flex: 1;
+        }
+
+}
+@media only screen and (min-width:600px) {
+    .link {
+        display: none;
+    }
+
+    .links {
+
+        display: flex;
+    }
+
+}
+
+
+
+
+@media only screen and (min-width:700px) {
+
+        .scnContent {
+
+            display: flex;
+            
+            
+        }
+
+        article {
+            flex-direction: column;
+            height: 500px;
+        }
+
+        .imagen {
+
+            height: 70%;
+            width: 100%;
+            
+        }
+        .texto {
+            height: auto;
+            
+        }
+
+        .azul {
+            width: 300px;
+            padding: 25px;
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            
+        }
+
+
+
+
+}
+
+
+@media only screen and (min-width:1000px) {
+
+
+    .scnCentre {
+        display: flex;
+        
+
+    }
+
+    .scnPresent {
+       width: 60%;
+       height: auto;
+       
+     
+     }
+
+     .scnContent {
+        width: 40%;
+        flex-direction: column;
+     }
+
+     .imagen {
+        height: 450px;
+
+     }
+
+     .texto {
+        height: auto;
+     }
+
+
+}
+
